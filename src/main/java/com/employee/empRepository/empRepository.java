@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.employee.empEntity.Employee;
 
+
 public interface empRepository extends JpaRepository<Employee, Integer>{
- @Query(value="select * from employeedb.employee_details")
- public List<Employee>getAll();
+	@Query(value="SELECT * FROM institutedb",nativeQuery=true)
+	public List<Employee> getAll();
 }
